@@ -2,13 +2,13 @@ CFLAGS=  -g
 OBJS= sha1.o
 LIBS= -lsqlite3 -lmman
 
-all: ideviceunback
+all: mftiunpacker
 
-ideviceunback: $(OBJS) ideviceunback.c
-	gcc $(CFLAGS) ideviceunback.c $(OBJS) -o ideviceunback  $(LIBS)
+ideviceunback: $(OBJS) mftiunpacker.c
+	gcc $(CFLAGS) mftiunpacker.c $(OBJS) -o mftiunpacker  $(LIBS)
 
 clean:
-	rm ideviceunback *.o
+	rm mftiunpacker *.o
 
-install: ideviceunback
-	cp ideviceunback /usr/local/bin
+install: mftiunpacker
+	cp mftiunpacker /usr/local/bin
